@@ -225,13 +225,20 @@
         "colId": "history",
         "containerId": "",
         "name": "http://localhost:3000/user/4",
-        "url": "http://localhost:3000/user",
-        "method": "POST",
+        "url": "http://localhost:3000/user/1",
+        "method": "DELETE",
         "sortNum": 0,
         "created": "2023-07-20T13:30:55.662Z",
-        "modified": "2023-07-20T13:34:30.536Z",
+        "modified": "2023-07-20T13:38:26.871Z",
         "headers": [],
-        "params": [],
+        "params": [
+            {
+                "name": "id",
+                "value": "1",
+                "isDisabled": true,
+                "isPath": false
+            }
+        ],
         "body": {
             "type": "json",
             "raw": "{\n  \"name\": \"kishor\",\n  \"email\": \"kishor@gmail.com\",\n  \"age\": 9\n}",
