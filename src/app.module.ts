@@ -3,6 +3,7 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { ConfigModule, ConfigService } from '@nestjs/config';
+import { UserModule } from './user/user.module';
 
 @Module({
   imports: [
@@ -19,12 +20,14 @@ import { ConfigModule, ConfigService } from '@nestjs/config';
         port: 5432,
         username: 'postgres',
         password: 'root',
-        database: 'postgres',
-        // entities: [],
+        database: 'mydb',
+        entities: [__dirname + '/**/*.entity{.ts,.js}'],
         synchronize: true,
+        logging: true,
       }),
       inject: [ConfigService],
     }),
+    UserModule,
   ],
   controllers: [AppController],
   providers: [AppService],
